@@ -1,0 +1,44 @@
+extends layout.pug
+
+
+block content
+
+  .index-container
+    .main
+      .main__text
+        p Alexey V. Mililian Design Studio ™ - это идеальный брендинг с 2001 года. Наши работы - это высококачественные дизайнерские решения.
+        p Мы гордимся тем, что каждый клиент стремится сделать мир счастливее. Сохраните момент.
+      .main__desc
+        p Alexey V. Mililian Design Studio ™ - это идеальный брендинг с 2001 года. Наши работы - это высококачественные дизайнерские решения.
+        p Мы гордимся тем, что каждый клиент стремится сделать мир счастливее. Сохраните момент.
+      .me
+        .me__photo
+          img(src="./img/ava.png")
+        .me__container
+          .me__name Арсений Иванов
+          a(href="tel:+79996392116").me__phone +7 999 639-21-16
+      .btn.btn--primary
+        span.btn__text Написать мне
+        .btn__icon
+          img(src="./img/arrow.svg", alt="").svg
+    .works-container
+      .works
+        .work
+          .work__img(style="background-image: url(./img/top5krd.jpg)")
+        .work
+          .work__img(style="background-image: url(./img/tigaz.jpg)")
+        .work.work--big
+          .work__img(style="background-image: url(./img/buhcentr.jpg)")
+        .work
+          .work__img(style="background-image: url(./img/mirata.jpg)")
+        .work
+          .work__img(style="background-image: url(./img/scalo.jpg)")
+        .work.work--big
+          .work__img(style="background-image: url(./img/mebelioner.jpg)")
+        .work
+          .work__img(style="background-image: url(./img/top5krd.jpg)")
+        .work
+          .work__img(style="background-image: url(./img/tigaz.jpg)")
+        .work.work--big
+          .work__img(style="background-image: url(./img/paul-mitchell.jpg)")
+      .works__plate

@@ -1,0 +1,73 @@
+body
+  cursor none
+*
+  cursor none
+*:hover
+  cursor none
+
+.cursor
+  border-radius 50%
+  circle(8rem)
+  left -8rem
+  // mix-blend-mode difference
+  // overflow hidden
+  pointer-events none
+  position fixed
+  top -8rem
+  transition left .07s linear, top .07s linear
+  will-change left, top
+  z-index 99999
+  &:before
+    background-color #fff
+    circle(3.2rem)
+    content ''
+    mix-blend-mode difference
+    top -.4rem
+    left -.4rem
+    border-radius 50%
+    position absolute
+    transition all .2s ease
+  &:after
+    content ''
+    background-color $main
+    circle(2.4rem)
+    content ''
+    top 0rem
+    left 0rem
+    border-radius 50%
+    position absolute
+    transition all .2s ease
+  &__text
+    display inline-block
+    font-size 1.1rem
+    font-weight 700
+    line-height 1.2
+    margin-left .2rem
+    margin-top 2.7rem
+    opacity 0
+    position relative
+    pointer-events none
+    text-align center
+    // transform scale(0)
+    transition all .2s ease
+    z-index 50
+  &--active
+    &:before
+      circle(6.4rem)
+      left -2.4rem
+      opacity .5
+      top -2.4rem
+    &:after
+      display none
+  &--active-works
+    // cursor pointer !important
+    &:before
+      display none
+    &:after
+      circle(8rem)
+    .cursor
+      &__text
+        opacity 1
+        transform none
+
+

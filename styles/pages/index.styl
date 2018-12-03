@@ -1,0 +1,78 @@
+.index-wrapper
+  background-color $main
+  color #fff
+  height 100vh
+  padding-bottom 32rem
+
+// .index-container
+//   max-width 120rem
+//   padding 0 (120 / 1440 * 100)%
+
+.main
+  min-width 48rem
+  left (120 / 1440 * 100)%
+  position fixed
+  padding-top (120 / 900 * 100)vh
+  top 0
+  width (480 / 1440 * 100)vw
+  &__text
+    font-size 2.4rem
+    margin-bottom 4.8rem
+    p
+      line-height (32 / 24)
+      margin-bottom 2.4rem
+  &__desc
+    margin-bottom (64 / 900 * 100)vh
+    p
+      opacity .5
+
+.me
+  align-items center
+  display flex
+  margin-bottom (72 / 900 * 100)vh
+  &__photo
+    margin-right 2.4rem
+  &__name
+    font-size 2rem
+    font-weight 700
+    margin-bottom 1.2rem
+  &__phone
+    font-size 1.4rem
+    opacity .5
+
+.works-container
+  // height 100vh
+  overflow auto
+  right 0
+  position absolute
+  top 0
+  width 50%
+
+.works
+  display flex
+  flex-wrap wrap
+  width 100%
+  .work
+    height (420 / 1440 * 100)vw
+    overflow hidden
+    width 50%
+    &__img
+      background-size cover
+      background-position top center
+      height 100%
+      transition all .3s ease
+      width 100%
+    &--big
+      height (480 / 1440 * 100)vw
+      width 100%
+    &:hover
+      .work
+        &__img
+          transform scale(1.04)
+  &__plate
+    background-color $main
+    height 100%
+    right 0
+    position absolute
+    top 0
+    width 100%
