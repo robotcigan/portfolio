@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic");
 .mini-offset {
   margin-bottom: 2rem !important;
 }
@@ -1005,7 +1004,7 @@ body {
   width: 6.4rem;
   left: -2.4rem;
   opacity: 0.5;
-  top: -2.4rem;
+  top: -2rem;
 }
 .cursor--active:after {
   display: none;
@@ -1067,11 +1066,22 @@ body {
   height: 100vh;
   padding-bottom: 32rem;
 }
-.main {
+.index-container {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+.main__container {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
   min-width: 48rem;
   left: 8.333333333333332%;
   position: fixed;
-  padding-top: 13.333333333333334vh;
   top: 0;
   width: 33.33333333333333vw;
 }
@@ -1084,7 +1094,7 @@ body {
   margin-bottom: 2.4rem;
 }
 .main__desc {
-  margin-bottom: 7.111111111111111vh;
+  margin-bottom: 6.222222222222222vh;
 }
 .main__desc p {
   opacity: 0.5;
@@ -1094,7 +1104,7 @@ body {
   align-items: center;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 8vh;
+  margin-bottom: 7.111111111111111vh;
 }
 .me__photo {
   margin-right: 2.4rem;
@@ -1154,12 +1164,15 @@ body {
   max-width: 120rem;
   padding: 0 8.333333333333332%;
 }
-@media (max-width: 1200px) {
+@media (max-height: 900px) {
   body.body--cursor-pointer {
     cursor: pointer;
   }
-  .grid--container {
-    max-width: 96%;
+  .main__desc {
+    margin-bottom: 3.555555555555555vh;
+  }
+  .me {
+    margin-bottom: 3.555555555555555vh;
   }
 }
 

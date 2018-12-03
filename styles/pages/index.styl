@@ -4,17 +4,23 @@
   height 100vh
   padding-bottom 32rem
 
-// .index-container
-//   max-width 120rem
-//   padding 0 (120 / 1440 * 100)%
+.index-container
+  align-items center
+  display flex
+  height 100vh
 
-.main
+.main__container
+  align-items center
+  display flex
+  height 100vh
   min-width 48rem
   left (120 / 1440 * 100)%
   position fixed
-  padding-top (120 / 900 * 100)vh
+  // padding-top (120 / 900 * 100)vh
   top 0
   width (480 / 1440 * 100)vw
+
+.main
   &__text
     font-size 2.4rem
     margin-bottom 4.8rem
@@ -22,14 +28,14 @@
       line-height (32 / 24)
       margin-bottom 2.4rem
   &__desc
-    margin-bottom (64 / 900 * 100)vh
+    margin-bottom (56 / 900 * 100)vh
     p
       opacity .5
 
 .me
   align-items center
   display flex
-  margin-bottom (72 / 900 * 100)vh
+  margin-bottom (64 / 900 * 100)vh
   &__photo
     margin-right 2.4rem
   &__name
