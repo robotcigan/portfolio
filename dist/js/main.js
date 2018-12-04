@@ -2,9 +2,6 @@
 
 $(document).ready(function () {
 
-  // Video
-  // document.querySelector('video').play();
-
   // SVG magic
   jQuery('img.svg').each(function () {
     var $img = jQuery(this);
@@ -37,10 +34,10 @@ $(document).ready(function () {
       top: e.clientY - 4
     });
   });
-  $('.btn, a').on('mouseenter', function () {
+  $('.btn').on('mouseenter', function () {
     cursor.addClass('cursor--active');
   });
-  $('.btn, a').on('mouseleave', function () {
+  $('.btn').on('mouseleave', function () {
     cursor.removeClass('cursor--active');
   });
 
@@ -51,11 +48,8 @@ $(document).ready(function () {
     cursor.removeClass('cursor--active-works');
   });
 
-  // кастомный скрол
-  // if ( $('.works-container').length ) {
-  //   $('.works-container').mCustomScrollbar({
-  //     // theme: "dark",
-  //     mouseWheelPixels: 350
-  //   });
-  // }
+  // Модальное окно
+  $('.modal-open').magnificPopup({
+    type: 'inline'
+  });
 });

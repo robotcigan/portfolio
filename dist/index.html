@@ -33,18 +33,14 @@
               <div class="me__container">
                 <div class="me__name">Арсений Иванов</div><a class="me__phone" href="tel:+79996392116">+7 999 639-21-16</a>
               </div>
-            </div>
-            <div class="btn btn--primary"><span class="btn__text">Написать мне</span>
-              <div class="btn__icon"><img class="svg" src="./img/arrow.svg" alt=""></div>
-            </div>
+            </div><a class="btn btn--primary modal-open" href="#callback"><span class="btn__text">Написать мне</span>
+              <div class="btn__icon"><img class="svg" src="./img/arrow.svg" alt=""></div></a>
           </div>
         </div>
       </div>
       <div class="works-container">
-        <div class="works">
-          <div class="work">
-            <div class="work__img" style="background-image: url(./img/top5krd.jpg)"></div>
-          </div>
+        <div class="works"><a class="work modal-open" href="#top5krd">
+            <div class="work__img" style="background-image: url(./img/top5krd.jpg)"></div></a>
           <div class="work">
             <div class="work__img" style="background-image: url(./img/tigaz.jpg)"></div>
           </div>
@@ -72,6 +68,12 @@
         </div>
         <div class="works__plate"></div>
       </div>
+      <div class="modal" id="top5krd">
+        <div class="modal__container">
+          <div class="modal__header">Top5Krd</div>
+          <div class="modal__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim mollitia dolorum quo aliquid iste consectetur incidunt dolorem inventore, rerum tempore? Nostrum, saepe itaque. In sunt cum nam, odio ipsum autem.</div>
+        </div><img src="./img/top5krd/1.jpg" alt=""><img src="./img/top5krd/2.jpg" alt=""><img src="./img/top5krd/3.jpg" alt=""><img src="./img/top5krd/4.jpg" alt="">
+      </div>
     </div>
     <script src="./js/TweenMax.min.js"></script>
     <script src="./js/jquery-2.2.1.min.js"></script>
@@ -80,6 +82,7 @@
     <script src="./js/SmoothScroll.js"></script>
     <script src="./js/jquery.blast.min.js"></script>
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/main.js"></script>
   </body>
