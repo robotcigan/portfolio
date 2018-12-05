@@ -547,10 +547,10 @@ p {
   position: initial;
 }
 .modal {
-  animation: bigFadeUp 0.7s cubic-bezier(0.64, 0.04, 0.35, 1) forwards;
+  animation: bigFadeUp 0.5s cubic-bezier(0.64, 0.04, 0.35, 1) forwards;
   background: #222223;
   box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
-  display: block;
+  display: none;
   min-height: 100vh;
   padding: 9.6rem;
   position: absolute;
