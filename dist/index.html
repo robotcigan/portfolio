@@ -18,23 +18,30 @@
     </div>
     <div class="index-wrapper">
       <div class="index-container">
-        <div class="main__container">
+        <div class="main-container">
           <div class="main">
-            <div class="main__text">
-              <p>Alexey V. Mililian Design Studio ™ - это идеальный брендинг с 2001 года. Наши работы - это высококачественные дизайнерские решения.</p>
-              <p>Мы гордимся тем, что каждый клиент стремится сделать мир счастливее. Сохраните момент.</p>
-            </div>
-            <div class="main__desc">
-              <p>Alexey V. Mililian Design Studio ™ - это идеальный брендинг с 2001 года. Наши работы - это высококачественные дизайнерские решения.</p>
-              <p>Мы гордимся тем, что каждый клиент стремится сделать мир счастливее. Сохраните момент.</p>
-            </div>
-            <div class="me">
-              <div class="me__photo"><img src="./img/ava.png"></div>
-              <div class="me__container">
-                <div class="me__name">Арсений Иванов</div><a class="me__phone" href="tel:+79996392116">+7 999 639-21-16</a>
+            <div class="grid grid--container">
+              <div class="row">
+                <div class="col col--xl-12 col--sm-6">
+                  <div class="main__text">
+                    <p>UI/UX дизайнер с 3-х летним опытом работы, а так же большим опытом верстки сайтов.</p>
+                    <p>Разрабатываю дизайны корпоративных, персональных сайтов, интернет-магазинов и сервисов. Всегда готов к новым сотрудничествам.</p>
+                  </div>
+                </div>
+                <div class="col col--xl-12 col--sm-6">
+                  <div class="main__desc">
+                    <p>Открыт для фриланса, удаленного сотрудничества и постоянной работы в студии/агентстве. Для связи со мной можете написать мне или позвонить по телефону.</p>
+                  </div>
+                  <div class="me">
+                    <div class="me__photo"><img src="./img/ava.png"></div>
+                    <div class="me__container">
+                      <div class="me__name">Арсений Иванов</div><a class="me__phone" href="tel:+79996392116">+7 999 639-21-16</a>
+                    </div>
+                  </div><a class="btn btn--primary modal-open" href="#callback"><span class="btn__text">Написать мне</span>
+                    <div class="btn__icon"><img class="svg" src="./img/arrow.svg" alt=""></div></a>
+                </div>
               </div>
-            </div><a class="btn btn--primary modal-open" href="#callback"><span class="btn__text">Написать мне</span>
-              <div class="btn__icon"><img class="svg" src="./img/arrow.svg" alt=""></div></a>
+            </div>
           </div>
         </div>
       </div>
@@ -68,11 +75,13 @@
         </div>
         <div class="works__plate"></div>
       </div>
-      <div class="modal" id="top5krd">
-        <div class="modal__container">
-          <div class="modal__header">Top5Krd</div>
-          <div class="modal__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim mollitia dolorum quo aliquid iste consectetur incidunt dolorem inventore, rerum tempore? Nostrum, saepe itaque. In sunt cum nam, odio ipsum autem.</div>
-        </div><img src="./img/top5krd/1.jpg" alt=""><img src="./img/top5krd/2.jpg" alt=""><img src="./img/top5krd/3.jpg" alt=""><img src="./img/top5krd/4.jpg" alt="">
+      <div class="modal modal--callback" id="callback">
+        <div class="modal__header">Написать мне</div>
+        <form class="form">
+          <div class="form-control">
+            <input type="text" placeholder="Как вас зовут?">
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/TweenMax.min.js"></script>

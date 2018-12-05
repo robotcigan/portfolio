@@ -12,11 +12,43 @@
 //     max-width: 96%
 
 @media(max-height 900px)
-  body
-    &.body--cursor-pointer
-      cursor pointer
   .main
     &__desc
       margin-bottom (32 / 900 * 100)vh
   .me
     margin-bottom (32 / 900 * 100)vh
+
+@media(max-width 1200px)
+  body
+    &.body--cursor-pointer
+      cursor pointer
+  .cursor
+    display none
+  .index-container
+    height initial
+    margin-top 10vh
+    margin-bottom 8vh
+  .main-container
+    height initial
+    min-width initial
+    position initial
+    padding 0 6%
+    width 100%
+  .works-container
+    position initial
+    width 100%
+  .works
+    .work
+      height 60vw
+      &__img
+        background-position center
+
+@media(max-width 700px)
+  .index-container
+    margin-top 2rem
+  .main
+    &__text
+      font-size 2rem
+      margin-bottom 2.4rem
+    &__desc
+      font-size 1.2rem

@@ -1,36 +1,51 @@
+.mfp-bg
+  animation modalBg 1s ease
+
 .mfp-content
   position initial
 //   display flex
   // justify-content flex-end
 
 .modal
-  animation bigFadeUp .5s forwards ease
-  background $main + 15%
+  animation bigFadeUp .7s cubic-bezier(0.64, 0.04, 0.35, 1) forwards
+  // background $main + 15%
+  background #222223
   box-shadow 0 1rem 2rem rgba($main, .1)
-  display none
-  // overflow-X hidden
-  // margin 10rem auto
-  padding 0
+  // display none
+  display block
+  min-height 100vh
+  padding 9.6rem
   position absolute
   right 0
   top 0
-  width 50%
+  width 80%
   img
     display block
     max-width 100%
     margin-bottom 8rem
   &__container
-    margin 6.4rem 0
-    padding 2.4rem 8rem
-    text-align center
+    // margin 6.4rem 0
+    // padding 2.4rem 8rem
+    // text-align center
   &__header
     color #fff
-    font-size 6.4rem
+    font-size 4.8rem
     font-weight 700
     margin-bottom 3.2rem
   &__desc
     font-weight 300
-    line-height 1.4
+    line-height (24 / 16)
+    margin-bottom 4rem
+  &__label
+    display block
+    font-weight 400
+    font-size 1.4rem
+    margin-bottom 1.6rem
+    opacity .5
+  &--callback
+    width 50vw
+    .mfp-close
+      right 52vw !important
 
 .mfp-ready
   .modal
@@ -43,15 +58,22 @@
   color #fff
   font-size 4rem
   opacity 1
+  position fixed
   top 1.6rem
-  right 52vw
+  right 82vw
 
 .mfp-close
   circle(6rem)
 
+@keyframes modalBg
+  0%
+    opacity 0
+  100%
+    opacity .8
+
 @keyframes bigFadeUp
   0%
-    transform translateX(400px)
+    transform translateX(100%)
   100%
     transform none
 
