@@ -27,17 +27,17 @@ block content
                   img(src="./img/arrow.svg", alt="").svg
   .works-container
     .works
-      a(href="#top5krd").work.modal-open
+      a(href="case.top5krd.html").work.modal-case-open
         .work__img(style="background-image: url(./img/top5krd.jpg)")
-      .work
+      a(href="case.tigaz.html").work.modal-case-open
         .work__img(style="background-image: url(./img/tigaz.jpg)")
-      .work.work--big
+      a(href="case.buhcentr.html").work.work--big.modal-case-open
         .work__img(style="background-image: url(./img/buhcentr.jpg)")
       .work
         .work__img(style="background-image: url(./img/mirata.jpg)")
       .work
         .work__img(style="background-image: url(./img/scalo.jpg)")
-      .work.work--big
+      a(href="case.mebelioner.html").work.work--big.modal-case-open
         .work__img(style="background-image: url(./img/mebelioner.jpg)")
       .work
         .work__img(style="background-image: url(./img/top5krd.jpg)")
@@ -48,24 +48,30 @@ block content
     .works__plate
 
   #callback.modal.modal--callback
-    .modal__header Написать мне
-    form.form
-      .form-control
-        input(type="text" placeholder="Как вас зовут?")
+    .callback-before-send
+      .modal__header Написать мне
+      form.form
+        .form-control
+          input(type="text" name="name" placeholder="Как вас зовут?")
+        .form-control
+          input(type="tel" name="phone" placeholder="Телефон").phone-mask
+        .form-control
+          textarea(name="message" placeholder="Ваше сообщение")
+        .form__error
+          p Для отправки сообщения заполните все поля
+        #send-mail.btn.btn--primary
+          span.btn__text Отправить
+          .btn__icon
+            img(src="./img/arrow.svg", alt="").svg
+    .callback-success-send
+      .modal__header Супер!
+      p Я свяжусь с вами в ближайшее время и мы обсудим ближайший план работ. Так же вы можете позвонить мне в любой момент.
+      .me
+        .me__photo
+          img(src="./img/ava.png")
+        .me__container
+          .me__name Арсений Иванов
+          a(href="tel:+79996392116").me__phone +7 999 639-21-16
 
 
-  #top5krd.modal
-    .modal__header Top5Krd
-    .grid.grid--container
-      .row
-        .col.col--sm-8
-          span.modal__label Задача
-          .modal__desc Торговая марка переворачивает рекламный бриф. Особенность рекламы последовательно отражает экспериментальный рекламный бриф. Клиентский спрос отталкивает рекламный макет. План размещения довольно хорошо сбалансирован.
-        .col.col--sm-2.col--sm-offset-1
-          span.modal__label Год
-          .modal__desc 2018
-    span.modal__label Главная страница
-    img(src="./img/top5krd/1.jpg", alt="")
-    img(src="./img/top5krd/2.jpg", alt="")
-    img(src="./img/top5krd/3.jpg", alt="")
-    img(src="./img/top5krd/4.jpg", alt="")
+

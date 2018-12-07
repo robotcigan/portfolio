@@ -8,35 +8,36 @@ body
 .cursor
   border-radius 50%
   circle(8rem)
-  left -8rem
+  left 0
   // mix-blend-mode difference
   // overflow hidden
   pointer-events none
   position fixed
-  top -8rem
-  transition left .07s linear, top .07s linear
-  will-change left, top
+  top 0
+  // transition left .07s linear, top .07s linear
+  // will-change left, top
   z-index 99999
-  &:before
-    background-color #fff
-    circle(3.2rem)
-    content ''
-    mix-blend-mode difference
-    top -.4rem
-    left -.4rem
-    border-radius 50%
-    position absolute
-    transition all .2s ease
-  &:after
-    content ''
-    background-color $main
+  &__before
+    background-color rgba(#fff, .2)
     circle(2.4rem)
-    content ''
+    mix-blend-mode difference
+    // top -.8rem
+    // left -.8rem
+    margin -.8rem
+    border-radius 50%
+    // position absolute
+    transition transform .15s ease
+    will-change transform
+  &__after
+    background-color #fff
+    circle(.8rem)
     top 0rem
     left 0rem
     border-radius 50%
     position absolute
-    transition all .2s ease
+    transition background-color .2s ease, height .2s ease, width .2s ease
+    // transition transform .07s ease
+    // will-change transform
   &__text
     display inline-block
     font-size 1.1rem
@@ -45,29 +46,42 @@ body
     margin-left .2rem
     margin-top 2.7rem
     opacity 0
-    position relative
+    position absolute
+    left 0
+    top 0
     pointer-events none
     text-align center
     // transform scale(0)
-    transition all .2s ease
+    transition opacity .2s ease
     z-index 50
   &--active
-    &:before
-      circle(6.4rem)
-      left -2.4rem
-      opacity .5
-      top -2rem
-    &:after
-      display none
+    .cursor
+      &__before
+        circle(6.4rem)
+        // left -2.4rem
+        margin -2.4rem
+        opacity .5
+        // top -2rem
+      &__after
+        display none
   &--active-works
     // cursor pointer !important
-    &:before
-      display none
-    &:after
-      circle(8rem)
+    .cursor
+      &__before
+        display none
+      &__after
+        background-color $main
+        circle(8rem)
     .cursor
       &__text
         opacity 1
-        transform none
+        // transform none
 
 
+@media(max-width 1200px)
+  body
+    cursor initial
+  *
+    cursor initial
+  *:hover
+    cursor initial

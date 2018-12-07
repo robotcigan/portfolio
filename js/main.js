@@ -24,14 +24,31 @@ $(document).ready(function() {
     }, 'xml');
   });
 
+  // Phone mask Телефон маска
+  if ( $('.phone-mask').length ) {
+    $('.phone-mask').inputmask({
+      mask: "+7 (999) 999 99 99",
+      showMask: true,
+      showMaskOnHover: false
+    });
+  }
+
+  // Sendmail
+  // $('#send-mail').on('click', function() {
+  //   $(this).closest('.modal').find('.callback-before-send').addClass('callback-before-send--disable');
+  //   $(this).closest('.modal').find('.callback-success-send').addClass('callback-success-send--active');
+  // })
+
   // Mouse
   let cursor = $('.cursor')
   $(window)
     .on('mousemove', (e) => {
-        cursor.css({
-            left: e.clientX - 4,
-            top: e.clientY - 4,
+        $('.cursor__before, .cursor__after, .cursor__text').css({
+            transform: `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`
         });
+        // $('.cursor__after').css({
+        //     transform: `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`
+        // });
     })
   $('.btn').on('mouseenter', () => {
     cursor.addClass('cursor--active');
@@ -51,5 +68,8 @@ $(document).ready(function() {
   $('.modal-open').magnificPopup({
     type: 'inline'
   });
+  $('.modal-case-open').magnificPopup({
+    type: 'ajax'
+  })
 
 });

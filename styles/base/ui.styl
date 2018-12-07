@@ -1,3 +1,12 @@
+.form
+  &__error
+    display none
+    p
+      color $error
+      opacity 1
+    &--active
+      display block
+
 .btn
   border 0
   color #fff
@@ -45,18 +54,23 @@
          margin-left 2.4rem
       &:before
         width 100%
-  &--white
-    background-color #fff
-    color $main
-    &:hover
-      opacity .7
-  &--full-size
-    padding 2.2rem 3rem
-    text-align center
-    width 100%
-  & + .btn
-    margin-left 2rem
-
+  &__preloader
+    animation spin .75s infinite linear
+    border 3px solid rgba(#fff, .1)
+    border-bottom-color #fff
+    border-radius 50%
+    circle(3.2rem)
+    display none
+    margin-top -4px
+    vertical-align middle
+  // &--loading
+  //   .btn
+  //     &__text
+  //       display none
+  //     &__icon
+  //       display none
+  //     &__preloader
+  //       display inline-block
 
 .flatpickr
   &-month
@@ -90,8 +104,9 @@
   input[type="number"],
   select,
   textarea
-    background $third
+    background rgba(#fff, .1)
     border none
+    border-radius 0
     color #fff
     display block
     font-family $font
@@ -102,73 +117,16 @@
     padding 2rem 3.2rem
     position relative
     resize vertical
+    transition all .3s ease
     width 100%
     -webkit-appearance none
-    // &:focus
-    //   border-color $primary
-    //   & + .form-control__icon
-    //     transform rotate(180deg)
+    &:hover
+      background-color rgba(#fff, .15)
+    &:focus
+      background-color rgba(#fff, .2)
   textarea
     height 100%
     min-height 16rem
-
-  &--error
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="number"],
-    select,
-    textarea,
-    .select2-selection--single
-      border-color $error
-    label
-      color $error
-    .form-control__icon
-      color $error
-  
-  &--inline
-    align-items center
-    display flex
-    justify-content space-between
-    label
-      flex-shrink 0
-      margin-bottom 0
-      margin-right 5rem
-    input,
-    select,
-    .select2-selection--single
-      max-width 40%
-    .form-control
-      &__text
-        top 1.8rem
-
-
-.select2
-  &-container--default
-    .select2-selection__arrow b
-      display none
-  &-dropdown
-    border $border
-  &-selection
-    &--single
-      height initial !important
-    &__rendered
-      line-height 1.2 !important
-      padding-left 0 !important
-  &-results__option
-    padding 1.2rem
-    padding-left 2rem
-  &-container--open .select2-dropdown--below
-    box-shadow 0 16px 24px 0 rgba(135, 149, 163, .1)
-  &-dropdown.select2-dropdown--below 
-    animation fadeUp .3s forwards
-
-
-// dropdown element hover
-.select2-container--default .select2-results__option--highlighted[aria-selected]
-  background-color $primary
 
 .checkbox
   cursor pointer
@@ -359,3 +317,7 @@
   
   .noUi-horizontal
     margin-bottom 6rem
+
+@keyframes spin
+  100%
+    transform rotate(360deg)

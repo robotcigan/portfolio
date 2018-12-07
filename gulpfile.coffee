@@ -28,6 +28,7 @@ gulp.task 'stylus', ->
     #   'uglyComments': true
     .pipe sourcemaps.write('.')
     .pipe gulp.dest 'dist/styles/css/'
+    .pipe gulp.dest '../../xampp/htdocs/portfolio/styles/css/'
     .pipe(reload({stream: true, match: '**/*.css'}))
 
 
@@ -46,6 +47,7 @@ gulp.task 'es6', ->
       presets: ['es2015']
     .on 'error', swallowError
     .pipe gulp.dest 'dist/js'
+    .pipe gulp.dest '../../xampp/htdocs/portfolio/js/'
     .pipe(reload({stream: true}))
 
 
@@ -58,12 +60,14 @@ gulp.task 'imagemin', ->
   })
   .on 'error', swallowError
   .pipe gulp.dest('dist/img')
+  .pipe gulp.dest('../../xampp/htdocs/portfolio/img/')
 
 gulp.task 'pug', ->
   gulp.src '*.pug'
     .pipe pug {pretty: true}
     .on 'error', swallowError
     .pipe gulp.dest 'dist/'
+    .pipe gulp.dest '../../xampp/htdocs/portfolio/'
 
 
 

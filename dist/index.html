@@ -11,7 +11,9 @@
   </head>
   <body>
     <div class="cursor">
+      <div class="cursor__before"></div>
       <div class="cursor__text">Смотреть работу</div>
+      <div class="cursor__after"></div>
     </div>
     <div class="preloader">
       <div class="preloader__plate"></div>
@@ -46,23 +48,17 @@
         </div>
       </div>
       <div class="works-container">
-        <div class="works"><a class="work modal-open" href="#top5krd">
-            <div class="work__img" style="background-image: url(./img/top5krd.jpg)"></div></a>
-          <div class="work">
-            <div class="work__img" style="background-image: url(./img/tigaz.jpg)"></div>
-          </div>
-          <div class="work work--big">
-            <div class="work__img" style="background-image: url(./img/buhcentr.jpg)"></div>
-          </div>
+        <div class="works"><a class="work modal-case-open" href="case.top5krd.html">
+            <div class="work__img" style="background-image: url(./img/top5krd.jpg)"></div></a><a class="work modal-case-open" href="case.tigaz.html">
+            <div class="work__img" style="background-image: url(./img/tigaz.jpg)"></div></a><a class="work work--big modal-case-open" href="case.buhcentr.html">
+            <div class="work__img" style="background-image: url(./img/buhcentr.jpg)"></div></a>
           <div class="work">
             <div class="work__img" style="background-image: url(./img/mirata.jpg)"></div>
           </div>
           <div class="work">
             <div class="work__img" style="background-image: url(./img/scalo.jpg)"></div>
-          </div>
-          <div class="work work--big">
-            <div class="work__img" style="background-image: url(./img/mebelioner.jpg)"></div>
-          </div>
+          </div><a class="work work--big modal-case-open" href="case.mebelioner.html">
+            <div class="work__img" style="background-image: url(./img/mebelioner.jpg)"></div></a>
           <div class="work">
             <div class="work__img" style="background-image: url(./img/top5krd.jpg)"></div>
           </div>
@@ -76,25 +72,36 @@
         <div class="works__plate"></div>
       </div>
       <div class="modal modal--callback" id="callback">
-        <div class="modal__header">Написать мне</div>
-        <form class="form">
-          <div class="form-control">
-            <input type="text" placeholder="Как вас зовут?">
-          </div>
-        </form>
-      </div>
-      <div class="modal" id="top5krd">
-        <div class="modal__header">Top5Krd</div>
-        <div class="grid grid--container">
-          <div class="row">
-            <div class="col col--sm-8"><span class="modal__label">Задача</span>
-              <div class="modal__desc">Торговая марка переворачивает рекламный бриф. Особенность рекламы последовательно отражает экспериментальный рекламный бриф. Клиентский спрос отталкивает рекламный макет. План размещения довольно хорошо сбалансирован.</div>
+        <div class="callback-before-send">
+          <div class="modal__header">Написать мне</div>
+          <form class="form">
+            <div class="form-control">
+              <input type="text" name="name" placeholder="Как вас зовут?">
             </div>
-            <div class="col col--sm-2 col--sm-offset-1"><span class="modal__label">Год</span>
-              <div class="modal__desc">2018</div>
+            <div class="form-control">
+              <input class="phone-mask" type="tel" name="phone" placeholder="Телефон">
+            </div>
+            <div class="form-control">
+              <textarea name="message" placeholder="Ваше сообщение"></textarea>
+            </div>
+            <div class="form__error">
+              <p>Для отправки сообщения заполните все поля</p>
+            </div>
+            <div class="btn btn--primary" id="send-mail"><span class="btn__text">Отправить</span>
+              <div class="btn__icon"><img class="svg" src="./img/arrow.svg" alt=""></div>
+            </div>
+          </form>
+        </div>
+        <div class="callback-success-send">
+          <div class="modal__header">Супер!</div>
+          <p>Я свяжусь с вами в ближайшее время и мы обсудим ближайший план работ. Так же вы можете позвонить мне в любой момент.</p>
+          <div class="me">
+            <div class="me__photo"><img src="./img/ava.png"></div>
+            <div class="me__container">
+              <div class="me__name">Арсений Иванов</div><a class="me__phone" href="tel:+79996392116">+7 999 639-21-16</a>
             </div>
           </div>
-        </div><span class="modal__label">Главная страница</span><img src="./img/top5krd/1.jpg" alt=""><img src="./img/top5krd/2.jpg" alt=""><img src="./img/top5krd/3.jpg" alt=""><img src="./img/top5krd/4.jpg" alt="">
+        </div>
       </div>
     </div>
     <script src="./js/TweenMax.min.js"></script>
@@ -106,6 +113,8 @@
     <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/animations.js"></script>
+    <script src="./js/jquery.inputmask.bundle.min.js"></script>
+    <script src="./js/sendmail.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

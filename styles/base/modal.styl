@@ -19,10 +19,6 @@
   right 0
   top 0
   width 80%
-  img
-    display block
-    max-width 100%
-    margin-bottom 8rem
   &__container
     // margin 6.4rem 0
     // padding 2.4rem 8rem
@@ -44,18 +40,23 @@
     opacity .5
   &--callback
     width 50vw
-    .mfp-close
-      right 52vw !important
+    .mfp-close,
+    .mfp-close:active
+      right 52vw
+
 
 .mfp-ready
   .modal
     display block
+    top 0 !important
 
-.mfp-close-btn-in .mfp-close,
-.mfp-close-btn-in .mfp-close:active
+// .mfp-close-btn-in .mfp-close,
+// .mfp-close-btn-in .mfp-close:active
+.mfp-close,
+.mfp-close:active
   // background-color #fff
   border-radius 50%
-  color #fff
+  color #fff !important
   font-size 4rem
   opacity 1
   position fixed
@@ -64,6 +65,15 @@
 
 .mfp-close
   circle(6rem)
+
+.callback-before-send
+  display block
+  &--disable
+    display none
+.callback-success-send
+  display none
+  &--active
+    display block
 
 @keyframes modalBg
   0%
@@ -77,17 +87,27 @@
   100%
     transform none
 
+@media(max-width 1200px)
+  .modal
+    width 90vw
+  .modal--callback
+    width 60vw
+  .mfp-close-btn-in .mfp-close,
+  .mfp-close-btn-in .mfp-close:active
+    top .5rem
+    right .5rem
 
 @media(max-width 767px)
   .mfp-container
     padding 0
   .modal
     padding 6rem 6%
+    top 0
     right 0
-    width 94%
-  .mfp-close,
-  .mfp-close:active
-    font-size 4rem
-    opacity 1
-    top 1rem
-    right -.5rem
+    width 100%
+  // .mfp-close,
+  // .mfp-close:active
+  //   font-size 4rem
+  //   opacity 1
+  //   top 1rem
+  //   right -.5rem
