@@ -1020,6 +1020,7 @@ body {
 .main__text p {
   line-height: 1.333333333333333;
   margin-bottom: 2.4rem;
+  opacity: 1;
 }
 .main__desc {
   margin-bottom: 6.222222222222222vh;
